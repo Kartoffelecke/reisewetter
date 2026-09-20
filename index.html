@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reisewetter — Travel Weather Comparison</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Reisewetter</h1>
+  <div id="controls">
+    <div class="control-group">
+      <label for="threshold-input">Rain day threshold (mm)</label>
+      <input type="number" id="threshold-input" min="0" step="0.1" value="1.0">
+    </div>
+    <div id="marker-legend"></div>
+  </div>
+</header>
+
+<div id="main">
+  <div id="map"></div>
+
+  <div id="charts">
+    <div class="chart-card">
+      <h2>Max Temperature (°C)</h2>
+      <div id="chart-tmax" class="chart"></div>
+    </div>
+    <div class="chart-card">
+      <h2>Min Temperature (°C)</h2>
+      <div id="chart-tmin" class="chart"></div>
+    </div>
+    <div class="chart-card">
+      <h2>Rain Days</h2>
+      <div id="chart-raindays" class="chart"></div>
+    </div>
+    <div class="chart-card">
+      <h2>Rain (mm)</h2>
+      <div id="chart-rainmm" class="chart"></div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
