@@ -407,3 +407,9 @@ document.getElementById('threshold-input').addEventListener('input', (e) => {
 // ---- BOOTSTRAP ----
 
 initCharts();
+
+let resizeDebounceTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeDebounceTimer);
+  resizeDebounceTimer = setTimeout(() => map.invalidateSize(), 150);
+});

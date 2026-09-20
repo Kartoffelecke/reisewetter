@@ -177,15 +177,20 @@ header h1 {
   }
   #main {
     flex-direction: column;
+    height: auto;
   }
   #map {
+    flex: 0 0 45vh;
+    width: 100%;
     height: 45vh;
   }
   #charts {
+    flex: none;
     overflow: visible;
   }
   .chart-card {
-    min-height: 240px;
+    flex: none;
+    min-height: 260px;
   }
   #marker-legend {
     margin-left: 0;
